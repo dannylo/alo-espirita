@@ -1,10 +1,17 @@
 package com.aloespirita.models;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class Usuario {
@@ -14,13 +21,17 @@ public class Usuario {
 	private long id;
 	@Column(nullable = false)
 	private String nome;
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String email;
 	@Column(nullable = false)
 	private String senha;
+	private LocalDate ultimoLogin;
 	private String cep;
 	private String endereco;
 	private String cidade;
+	@ManyToMany
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private List<CasaEspirita> seguidos;
 
 	public long getId() {
 		return id;
@@ -78,6 +89,22 @@ public class Usuario {
 		this.cidade = cidade;
 	}
 
-		
+	public List<CasaEspirita> getSeguidos() {
+		return seguidos;
+	}
+
+	public void setSeguidos(List<CasaEspirita> seguidos) {
+		this.seguidos = seguidos;
+	}
+
+	public LocalDate getUltimoLogin() {
+		return ultimoLogin;
+	}
+
+	public void setUltimoLogin(LocalDate ultimoLogin) {
+		this.ultimoLogin = ultimoLogin;
+	}
+	
+	
 
 }

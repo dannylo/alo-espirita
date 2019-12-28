@@ -2,7 +2,8 @@ package com.aloespirita.enums;
 
 public enum ExceptionMessages {
 	
-	USUARIO_NAO_ECONTRADO("Usuário não encontrado na base de dados.");
+	USUARIO_NAO_ECONTRADO("Usuário não encontrado na base de dados."),
+	CREDENCIAIS_INVALIDAS("E-mail ou senha inválidos.");
 	
 	private String message;
 	
