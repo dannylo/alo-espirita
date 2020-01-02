@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
-import com.aloespirita.dtos.Login;
 import com.aloespirita.enums.ExceptionMessages;
 import com.aloespirita.exceptions.UsuarioException;
 import com.aloespirita.models.Usuario;
