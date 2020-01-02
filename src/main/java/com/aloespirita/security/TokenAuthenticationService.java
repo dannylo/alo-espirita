@@ -14,10 +14,10 @@ import org.springframework.util.StringUtils;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-public class TokenAthenticationService {
+public class TokenAuthenticationService {
 	
 	private static final long EXPIRATION_TIME = 860_000_000;
-	private static final String SECRET = "EspiritaSecret";
+	private static final String SECRET = "EspiritaSecretConnector";
 	private static final String TOKEN_PREFIX = "Bearer";
 	private static final String HEADER_STRING = "Authorization";
 	

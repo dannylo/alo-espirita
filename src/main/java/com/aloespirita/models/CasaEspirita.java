@@ -1,7 +1,5 @@
 package com.aloespirita.models;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +16,7 @@ public class CasaEspirita {
 	private long id;
 	private String nome;
 	private String cep;
-	@Column(name = "email_responsavel", nullable = false)
+	@Column(name = "email_responsavel", nullable = false, unique = true)
 	private String emailResponsavel;
 	@Column(nullable = false)
 	private String senha;
