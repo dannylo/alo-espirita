@@ -25,6 +25,7 @@ public class Usuario {
 	private String email;
 	@Column(nullable = false)
 	private String senha;
+	private String thumbnail;
 	private LocalDate ultimoLogin;
 	private String cep;
 	private String endereco;
@@ -59,6 +60,14 @@ public class Usuario {
 
 	public String getSenha() {
 		return senha;
+	}
+
+	public String getThumbnail() {
+		return thumbnail;
+	}
+
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
 	}
 
 	public void setSenha(String senha) {

@@ -4,10 +4,15 @@ import com.aloespirita.enums.ExceptionMessages;
 
 public class UsuarioException extends Exception {
 	
-	private ExceptionMessages message;
+	private static final long serialVersionUID = 1L;
+	private ExceptionMessages exceptionMessage;
 	
-	public UsuarioException(ExceptionMessages message) {
-		super(message.getMessage());
-		this.message = message;
+	public UsuarioException(ExceptionMessages exceptionMessage) {
+		super(exceptionMessage.getMessage());
+		this.exceptionMessage = exceptionMessage;
+	}
+	
+	public ExceptionMessages getExceptionMessage() {
+		return this.exceptionMessage;
 	}
 }
